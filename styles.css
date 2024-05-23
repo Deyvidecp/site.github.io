@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #3220bc;
+    width: 200px; /* Define a largura do menu vertical */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+    background-color: #601313;
+}
+
+/* Adiciona uma animação suave ao hover */
+.menu-item a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item a:hover::after {
+    width: 100%;
+    background: #fff;
+}
+
